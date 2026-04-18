@@ -33,7 +33,7 @@ app.get( (req, res) => {
 // connect DB
 async function connectDB() {
   try {
-    await connect(process.env.DB_URL);
+    await connect(process.env.MONGO_URI);
     console.log("Connected to DB");
 
     const port = process.env.PORT || 4000;
